@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BEAUTICS✨</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Baloo 2", cursive;
+    }
+
+
+    body {
+      background: linear-gradient(135deg, #ffd6e8, #ffc1d6, #ffb6c1);
+      color: #6b3a3a;
+      overflow-x: hidden;
+    }
+
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 60px;
+      background: rgba(255, 240, 245, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 3px 12px rgba(255, 105, 180, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+
+    .logo {
+      font-size: 2.2rem;
+      color: #ff4f9d;
+      text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.4);
+    }
+
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+
+    nav ul li a {
+      text-decoration: none;
+      color: #6b3a3a;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+
+    nav ul li a:hover {
+      color: #ff4f9d;
+    }
+
+
+    .hero {
+      height: 100vh;
+      padding-top: 140px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: radial-gradient(circle at top left, #ffe6f0, #ffc1d6, #ffb6c1);
+    }
+
+
+    .hero h1 {
+      font-size: 3.5rem;
+      color: #ff4f9d;
+      text-shadow: 2px 4px 6px rgba(255, 105, 180, 0.4);
+      margin-bottom: 10px;
+    }
+
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+
+    .hero .btn {
+      padding: 15px 40px;
+      background: linear-gradient(90deg, #ff7fbf, #ff9ecd);
+      border: none;
+      border-radius: 40px;
+      color: white;
+      cursor: pointer;
+      font-size: 1.2rem;
+      box-shadow: 0 5px 18px rgba(255, 105, 180, 0.5);
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+
+    .hero .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 25px rgba(255, 105, 180, 0.6);
+    }
+
+
+    .about {
+      padding: 80px 20px;
+      background: #ffe6f0;
+      text-align: center;
+    }
+
+
+    .about h2 {
+      color: #ff4f9d;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+
+    .about p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+
+    /* STREAM OUTLINE */
+    .outline {
+      padding: 70px 20px;
+      background: #fff0f7;
+      text-align: center;
+    }
+
+
+    .outline h2 {
+      font-size: 2.4rem;
+      color: #ff4f9d;
+      margin-bottom: 25px;
+    }
+
+
+    table {
+      width: 90%;
+      margin: auto;
+      border-collapse: collapse;
+      font-size: 1.1rem;
+      background: white;
+      box-shadow: 0 6px 18px rgba(255, 105, 180, 0.3);
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+
+    th, td {
+      border: 1px solid #ffc1d6;
+      padding: 15px;
+    }
+
+
+    th {
+      background: #ffb6d6;
+      color: white;
+      font-weight: bold;
+    }
+
+
+    td {
+      background: #fff7fb;
+    }
+
+
+    .video-section {
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #ffd6e8, #ffc1d6);
+      text-align: center;
+    }
+
+
+    .video-section h2 {
+      font-size: 2.4rem;
+      color: #ff4f9d;
+      margin-bottom: 25px;
+    }
+
+
+    .video-container {
+      width: 90%;
+      max-width: 700px;
+      margin: auto;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 5px solid #ffb6d6;
+      box-shadow: 0 6px 18px rgba(255, 105, 180, 0.4);
+    }
+
+
+    video {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+
+    .features {
+      padding: 80px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      background: #ffeef7;
+    }
+
+
+    .card {
+      background: white;
+      width: 260px;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(255, 105, 180, 0.4);
+      transition: 0.3s;
+    }
+
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(255, 105, 180, 0.5);
+    }
+
+
+    .card h3 {
+      color: #ff4f9d;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+
+    footer {
+      background: #ff4f9d;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 1rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+
+<body>
+
+
+<header>
+  <div class="logo">BEAUTICS</div>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#outline">Stream Outline</a></li>
+      <li><a href="#video">Video</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<section class="hero">
+  <h1>Welcome to Beautics 💋</h1>
+  <p>We proudly offer a curated collection of makeup, skincare, and haircare designed to make you glow inside and out.</p>
+  <a href="https://www.youtube.com/@BeaticsGroup8/featured" target="_blank" class="btn">Explore 💄</a>
+</section>
+
+
+<section class="about" id="about">
+  <h2>About us</h2>
+  <p>
+    At Beautics, we believe beauty begins with confident nourishment.
+    Our products complement your looks while nurturing your body.
+    From bright cosmetics to gentle skincare and powerful haircare,
+    we empower you to feel your absolute best — inside and out.
+  </p>
+</section>
+
+
+<section id="gallery">
+  <h2>Image Gallery 🌸</h2>
+  <div class="gallery">
+    <img src="https://image2url.com/r2/default/images/1769955102674-95433ec7-8068-46d9-8533-3d28da3d9173.png" alt="Beautics Gallery Image">
+  </div>
+
+
+  <p class="live-views">
+    <strong>Live Views:</strong> We gained 85 live viewing of our stream during the whole stream starting from 3:35 pm until 4:25 pm.
+  </p>
+</section>
+   
+  <section id="gallery">
+  <h2>Image Gallery 🌸</h2>
+  <div class="gallery">
+    <img src="https://image2url.com/r2/default/images/1769955352359-1db314d8-7645-4b87-88f1-b9e660954710.png" alt="Beautics Gallery Image">
+  </div>
+
+
+  <p class="live-views">
+    <strong>Followers :</strong> Followers: We gained five new followers during our stream, and we peaked at 2 followers at 3:35 pm during the whole stream.
+
+
+  </p>
+</section>
+
+
+<section id="gallery">
+  <h2>Image Gallery 🌸</h2>
+  <div class="gallery">
+    <img src="https://image2url.com/r2/default/images/1769955488822-3957b868-5a4b-475d-88ce-413e7af9c884.png">
+  </div>
+
+
+  <p class="live-views">
+    <strong>Average Viewers:</strong> Our average stream viewers peaked at 11 viewers.
+
+
+  </p>
+</section>
+   
+<section id="gallery">
+  <h2>Image Gallery 🌸</h2>
+  <div class="gallery">
+    <img src="https://image2url.com/r2/default/images/1769983046261-e487e6b2-51e9-4304-92b3-b9c297e8ecc2.png">
+  </div>
+
+
+  <p class="live-views">
+    <strong>Unique:</strong> Unique for the stream, we peaked at 3:35 at least 4 different times during the whole live stream.
+  </p>
+</section>
+
+
+<section id="gallery">
+  <h2>Image Gallery 🌸</h2>
+  <div class="gallery">
+    <img src="https://image2url.com/r2/default/images/1769983331669-9a09e1f4-9ea2-4935-a643-e777611a784a.png">
+  </div>
+
+
+  <p class="live-views">
+    <strong>Chat messages:</strong> For our chat messages, we gained 101 comments during the whole stream.
+
+
+  </p>
+</section>
+
+
+<section id="gallery">
+  <h2>Image Gallery 🌸</h2>
+  <div class="gallery">
+    <img src="https://image2url.com/r2/default/images/1769983423307-d8550600-19a5-428c-8fec-cddba894daa9.png">
+  </div>
+
+
+  <p class="live-views">
+    <strong>Summary:</strong> Our summary of analytics showed that most viewers used Android at 54.12%, second mobile-web at 22.35%, third web at 14.12%, and iOS 9.41% by users platforms. In terms of location of the viewers, almost all are in the Philippines at 96.47 followed by US at 2.35 percent, and IE 1.18 percent at last.
+
+
+  </p>
+</section>
+
+
+<section id="gallery">
+  <h2>Image Gallery 🌸</h2>
+  <div class="gallery">
+    <img src="https://image2url.com/r2/default/images/1769983562979-48ac6819-8c78-44c7-8451-dbff10b53dd4.png">
+  </div>
+
+
+  <p class="live-views">
+    <strong>Duration:</strong> In our last stream, we live-streamed for 1 hour and 29 minutes, with an average viewership of 6 during this stream, and with 11 was max viewers during the same live stream.
+Our unique viewers were up to 28, with 10 unique chatters at the same time, as well as  85 live views during the same time period of the live stream. We lastly gained 5 followers and 0 clips for the same live stream.
+To give a summary, our first and a half hour stream made our audience highly engaged through tutorials and entertainment of our beauty stream from the analytics of 85 live views alongside with an active audience engaging by a hundred comments of our stream.
+
+
+  </p>
+</section>
+
+
+<section id="gallery">
+  <h2>Image Gallery 🌸</h2>
+  <div class="gallery">
+    <img src="https://image2url.com/r2/default/images/1769983841796-5210b091-2772-4633-a265-27aa08598514.png">
+  </div>
+
+
+  <p class="live-views">
+    <strong>Viewers by location:</strong> Viewers by Platform: The majority of viewers are 46 from Android, 19 viewers from Mobile Web, 12 viewers from Web and 8 from iOS.
+
+
+
+
+  </p>
+</section>
+
+
+<section id="gallery">
+  <h2>Image Gallery 🌸</h2>
+  <div class="gallery">
+    <img src="https://image2url.com/r2/default/images/1769983945811-d171ec92-25e2-4a94-ae00-ba20396f3a0b.png">
+  </div>
+
+
+  <p class="live-views">
+    <strong>Viewers by location:</strong> Viewers by Location: The majority of The majority of viewers are 82 from Philippines, 2 viewers from the United States of America and 1 viewer from Ireland.
+
+
+
+
+  </p>
+</section>
+   
+
+
+  </div>
+</section>
+
+
+<section class="outline" id="outline">
+  <h2>Stream Outline</h2>
+
+
+  <table>
+    <tr>
+      <th>Time</th>
+      <th>Topic</th>
+      <th>Activity</th>
+      <th>Time Allotment</th>
+      <th>Screen</th>
+      <th>Audio</th>
+    </tr>
+
+
+    <tr>
+      <td>4:00–4:05</td>
+      <td>Starting Soon</td>
+      <td>Preparing the group members and letting the audience join before the stream.</td>
+      <td>5 mins</td>
+      <td>Video</td>
+      <td>Video Audio</td>
+    </tr>
+
+
+    <tr>
+      <td>4:05–4:10</td>
+      <td>Introduction</td>
+      <td>Introduce yourselves and explain the products.</td>
+      <td>5 mins</td>
+      <td>Video</td>
+      <td>Video Audio / Mic</td>
+    </tr>
+
+
+    <tr>
+      <td>4:10–4:15</td>
+      <td>Discussion</td>
+      <td>Ask viewers questions, interact, and shout out their names.</td>
+      <td>5 mins</td>
+      <td>Video</td>
+      <td>Video Audio / Mic</td>
+    </tr>
+
+
+    <tr>
+      <td>4:15–4:20</td>
+      <td>Content</td>
+      <td>Explain product purpose and design.</td>
+      <td>5 mins</td>
+      <td>Video</td>
+      <td>Video Audio / Mic</td>
+    </tr>
+
+
+    <tr>
+      <td>4:20–4:40</td>
+      <td>Demonstration</td>
+      <td>Show how to use the 3 products and highlight their features.</td>
+      <td>20 mins</td>
+      <td>Video</td>
+      <td>Video Audio / Mic</td>
+    </tr>
+
+
+    <tr>
+      <td>4:40–5:00</td>
+      <td>Discussion</td>
+      <td>Talk with the audience, answer questions, and build trust.</td>
+      <td>20 mins</td>
+      <td>Video</td>
+      <td>Video Audio / Mic</td>
+    </tr>
+  </table>
+</section>
+
+
+<section class="video-section" id="video">
+  <h2>Beautics</h2>
+  <div class="video-container">
+    <video controls>
+      <source src="videoimg/1116.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+
+<section class="video-section" id="video2">
+  <h2>Stream 🎥</h2>
+  <div class="video-container">
+    <iframe
+      src="https://drive.google.com/file/d/15ap5ufZNZCx_y5ZSqD_tLmVRL4Gt1KgT/preview"
+      allow="autoplay">
+    </iframe>
+  </div>
+</section>
+
+
+<section class="features">
+  <div class="card">
+    <h3>Lipstick Shades</h3>
+    <p>Glossy, matte, or satin — find the perfect pink for your look.</p>
+  </div>
+
+
+  <div class="card">
+    <h3>Blush Magic</h3>
+    <p>Soft rosy tones that bring out your natural glow.</p>
+  </div>
+
+
+  <div class="card">
+    <h3>Sparkle Set</h3>
+    <p>Highlighters that shimmer like fairy dust.</p>
+  </div>
+</section>
+
+
+<footer>
+  © 2025 BEAUTICS — Beauty is everything
+</footer>
+
+
+</body>
+</html>
